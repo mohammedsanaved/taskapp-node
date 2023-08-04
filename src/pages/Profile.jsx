@@ -1,16 +1,22 @@
 import React, { useContext } from "react";
-import { Context } from "../main";
-import Loader from "../components/Loader";
+// import { Context } from "../main";
+// import Loader from "../components/Loader";
 
 const Profile = () => {
-  const { loading, user } = useContext(Context);
+  // const { loading, user } = useContext(Context);
 
-  return loading ? (
-    <Loader />
-  ) : (
-    <div>
-      <h1>{user?.name}</h1>
-      <p>{user?.email}</p>
+  return (
+    <div className="container">
+      <div className="login">
+        <section>
+          <form>
+            <input type="text" placeholder="Name" required />
+            <input type="text" placeholder="Email" required />
+
+            <button type="submit">Update</button>
+          </form>
+        </section>
+      </div>
     </div>
   );
 };
